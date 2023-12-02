@@ -34,7 +34,7 @@ public class FormController {
 
     @Query
     @GetMapping("/findByTipoInfoName/{tipoInfoName}")
-    public ResponseEntity<Formulario>  findByTipoInfoName (String tipoInfoName){
+    public ResponseEntity<Formulario>  findByTipoInfoName (@PathVariable  String tipoInfoName){
         return new ResponseEntity<>(formularioServices.findByTipoInfoName(tipoInfoName),HttpStatus.OK);
     }
 
